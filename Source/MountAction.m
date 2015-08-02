@@ -48,7 +48,7 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:NSLocalizedString(@"Mounting '%@'.", @""), path];
+	return [NSString stringWithFormat:NSLocalizedString(@"Mounting '%@'.", @""), (userDescription ? userDescription:path)];
 }
 
 - (BOOL) execute: (NSString **) errorString {

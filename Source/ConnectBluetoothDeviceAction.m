@@ -53,7 +53,7 @@
 {
   NSString *format = NSLocalizedString(
     @"Connecting to Bluetooth device '%@'.", @"");
-  return [NSString stringWithFormat:format, self.deviceAddressString];
+  return [NSString stringWithFormat:format, (userDescription ? userDescription:self.deviceAddressString)];
 }
 
 - (BOOL)execute:(NSString **)errorString

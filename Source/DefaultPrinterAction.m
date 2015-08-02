@@ -52,7 +52,7 @@
 }
 
 - (NSString *)description {
-	return [NSString stringWithFormat:NSLocalizedString(@"Setting default printer to '%@'.", @""), printerQueue];
+	return [NSString stringWithFormat:NSLocalizedString(@"Setting default printer to '%@'.", @""), (userDescription ? userDescription:printerQueue)];
 }
 
 + (BOOL)setDefaultPrinterByPrinterName:(NSString *)name {

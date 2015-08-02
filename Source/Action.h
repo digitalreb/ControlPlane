@@ -6,7 +6,7 @@
 //
 
 @interface Action : NSObject {
-	NSString *type, *context, *when;
+	NSString *type, *context, *when, *userDescription;
 	NSNumber *delay, *enabled;
     
     // terrible hack so that an action can

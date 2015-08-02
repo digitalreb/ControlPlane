@@ -76,9 +76,9 @@ static NSLock *sharedLock = nil;
 	NSString *name = [self strippedRuleName];
 
 	if ([self isEnableRule])
-		return [NSString stringWithFormat:NSLocalizedString(@"Enabling Firewall Rule '%@'.", @""), name];
+		return [NSString stringWithFormat:NSLocalizedString(@"Enabling Firewall Rule '%@'.", @""), (userDescription ? userDescription:name)];
 	else
-		return [NSString stringWithFormat:NSLocalizedString(@"Disabling Firewall Rule '%@'.", @""), name];
+		return [NSString stringWithFormat:NSLocalizedString(@"Disabling Firewall Rule '%@'.", @""), (userDescription ? userDescription:name)];
 }
 
 - (BOOL)execute:(NSString **)errorString {

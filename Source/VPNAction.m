@@ -59,10 +59,10 @@
 
 	if (enabledPrefix == true)
 		return [NSString stringWithFormat:NSLocalizedString(@"Connecting to VPN '%@'.", @""),
-			strippedVPNType];
+			(userDescription ? userDescription:strippedVPNType];
 	else
 		return [NSString stringWithFormat:NSLocalizedString(@"Disconnecting from VPN '%@'.", @""),
-			strippedVPNType];
+			(userDescription ? userDescription:strippedVPNType)];
 }
 
 - (BOOL) execute: (NSString **) errorString {

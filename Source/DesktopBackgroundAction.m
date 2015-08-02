@@ -49,7 +49,7 @@
 - (NSString *)description
 {
 	return [NSString stringWithFormat:NSLocalizedString(@"Setting desktop background to '%@'.", @""),
-		[path lastPathComponent]];
+		(userDescription ? userDescription:[path lastPathComponent])];
 }
 
 - (BOOL)execute:(NSString **)errorString {

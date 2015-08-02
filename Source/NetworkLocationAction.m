@@ -71,7 +71,7 @@
 
 - (NSString *)description {
 	return [NSString stringWithFormat:NSLocalizedString(@"Changing network location to '%@'.", @""),
-		networkLocation];
+		(userDescription ? userDescription:networkLocation)];
 }
 
 - (BOOL)isRequiredNetworkLocationAlreadySet {

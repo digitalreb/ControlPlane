@@ -58,6 +58,7 @@
 	when = [@"Arrival" retain];
 	delay = [[NSNumber alloc] initWithDouble:0];
 	enabled = [[NSNumber alloc] initWithBool:YES];
+    userDescription = nil;
 	
 	return self;
 }
@@ -77,6 +78,7 @@
 	when = [[dict valueForKey:@"when"] copy];
 	delay = [[dict valueForKey:@"delay"] copy];
 	enabled = [[dict valueForKey:@"enabled"] copy];
+	userDescription = [[dict valueForKey:@"description"] copy];
 
 	return self;
 }
@@ -88,6 +90,7 @@
 	[when release];
 	[delay release];
 	[enabled release];
+    [userDescription release];
 
 	[super dealloc];
 }

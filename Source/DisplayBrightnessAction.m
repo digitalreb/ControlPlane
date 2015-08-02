@@ -86,7 +86,7 @@ const CFStringRef kDisplayBrightness = CFSTR(kIODisplayBrightnessKey);
 }
 
 - (NSString *) description {
-	return [NSString stringWithFormat: NSLocalizedString(@"Set brightness to %@%%.", @""), brightnessText];
+	return [NSString stringWithFormat: NSLocalizedString(@"Set brightness to %@%%.", @""), (userDescription ? userDescription:brightnessText)];
 }
 
 - (BOOL) execute: (NSString **) errorString {

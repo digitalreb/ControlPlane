@@ -50,7 +50,7 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:NSLocalizedString(@"Unmounting '%@'.", @""), path];
+	return [NSString stringWithFormat:NSLocalizedString(@"Unmounting '%@'.", @""), (userDescription ? userDescription:path)];
 }
 
 - (BOOL)execute:(NSString **)errorString
